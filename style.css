@@ -1,0 +1,285 @@
+/* Product Sans font-face */
+
+@font-face {
+    src: url("fonts/productsans.ttf");
+    font-family: 'productSans';
+}
+
+/* Icon font font-face */
+
+@font-face {
+    font-family: 'iconFont';
+    src: url('fonts/fontello.eot?8268888');
+    src: url('fonts/fontello.eot?8268888#iefix') format('embedded-opentype'), url('fonts/fontello.woff?8268888') format('woff'), url('fonts/fontello.ttf?8268888') format('truetype'), url('fonts/fontello.svg?8268888#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: productSans, serif;
+    background-color: #212121;
+    margin: 0;
+}
+
+/* Header for the Moon Client Website */
+
+.header {
+    position: fixed;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    top: 0;
+    padding: 20px 30px;
+    overflow: hidden;
+    font-size: 30px;
+    background: transparent;
+    z-index: 999;
+    transition: linear 0.2s;
+}
+
+.headerContent {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+}
+
+.header-background {
+    background-color: #111 !important;
+    box-shadow: 3px 0 12px #000;
+}
+
+/* Button elements for redirecting to different links */
+
+.header a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 23px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.btn-grad {
+    background-image: linear-gradient(to right, #9230FF 0%, #75e9fc 51%, #FF3BB8 100%)
+}
+
+.btn-grad {
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.75s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    display: block;
+}
+
+.btn-grad:hover {
+    background-position: right center;
+    /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.purchase {
+    background-color: #9230FF;
+}
+
+/* Card title icon, mainly used for information (might rename) */
+
+.purchaseIcon {
+    font-family: iconFont, serif;
+    font-style: normal;
+    text-decoration: none !important;
+    text-align: center;
+    font-size: 20px;
+    margin-right: 10px;
+    color: white;
+}
+
+/* Header Logo */
+
+.header a.logo {
+    color: #fff;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+/* Override the hover state so the logo will not be detected as a button */
+
+.header a.logo:hover {
+    filter: drop-shadow(0 0 0 #000);
+}
+
+/* Puts all content to the right of the header */
+
+.header-right {
+    float: right;
+}
+
+/* footer for the Moon Client Website */
+
+.footer {
+    overflow: hidden;
+    background-color: #111;
+    padding: 20px 10px;
+    font-size: 30px;
+    filter: drop-shadow(0 0 6px #111);
+}
+
+/* Description text */
+
+.footerTitle {
+    font-family: fontello;
+    font-variant: center;
+    font-size: 13px;
+    color: rgb(124, 116, 116);
+    opacity: 1;
+}
+
+.footerDesc {
+    font-family: productSans;
+    font-size: 16px;
+    color: gray;
+    opacity: 1;
+    margin: 0;
+}
+
+.footerContent {
+    position: relative;
+    top: 0;
+    margin: 40px auto !important;
+    padding-bottom: 40px !important;
+    max-width: 1100px;
+}
+
+.footerRef {
+    color: gray !important;
+    font-size: 16px !important;
+    margin: 0 !important;
+}
+
+/* Button elements for redirecting to different links */
+
+.footer a {
+    float: left;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 23px;
+    border-radius: 10px;
+    padding-right: 65px;
+}
+
+/* footer Logo */
+
+.footer a.logo {
+    color: #fff;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+/* Override the hover state so the logo will not be detected as a button */
+
+.footer a.logo:hover {
+    background-color: #111;
+    color: #fff;
+}
+
+/* Color of the Buttons one they are hovered */
+
+.footer a:hover {
+    color: #aaa;
+}
+
+/* Puts all content to the right of the footer */
+
+.footer-right {
+    float: right;
+}
+
+/* Puts all content to the left of the footer */
+
+.footer-left {
+    float: left;
+}
+
+/* Scroll to top button hover effect */
+
+#topButton:hover {
+    background-color: #555;
+}
+
+/* Top button style */
+
+#topButton {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-family: productSans, serif;
+    font-size: 18px;
+    background-color: transparent;
+    opacity: 0;
+    outline: none;
+    color: transparent;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    border: 0;
+}
+
+/* Arrow for the inside of the top button */
+
+#topButton span {
+    position: absolute;
+    top: 81.5%;
+    left: 55.5%;
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin: -12px 0 0 -8px;
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    box-sizing: border-box;
+}
+
+.snowflake {
+    position: fixed;
+    width: 5px;
+    height: 5px;
+    background: linear-gradient(white, white);
+    /* Workaround for Chromium's selective color inversion */
+    border-radius: 50%;
+    filter: drop-shadow(0 0 10px white);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+/* Define a screen end so the panels to click on will go downwards instead of on the right */
+
+@media screen and (max-width: 500px) {
+    .header {
+        background-color: #212121;
+    }
+    .header a {
+        float: none;
+        display: block;
+        text-align: left;
+        margin: 0;
+    }
+    .header-right {
+        float: none;
+    }
+}

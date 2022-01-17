@@ -1,0 +1,351 @@
+/* Product Sans font-face */
+
+@font-face {
+    src: url("fonts/productsans.ttf");
+    font-family: 'productSans';
+}
+
+/* Video Player Header div class */
+
+.videoPlayerHeader {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 24px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .5);
+}
+
+.image {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover !important;
+    box-shadow: 0 12px 6px rgba(0, 0, 0, 0.75);
+    opacity: 0.2;
+}
+
+/* IFrame Video Playback */
+
+.videoPlayerHeader iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    opacity: 0.1;
+    border-radius: 8px;
+}
+
+/* Set a minimal aspect ratio for the vhead
+
+@media (min-aspect-ratio: 16/9) {
+    .videoPlayerHeader iframe {
+        height: 56.25vw;
+    }
+}
+
+/* Set a maximum aspect ratio for the video */
+
+@media (max-aspect-ratio: 16/9) {
+    .videoPlayerHeader iframe {
+        width: 177.78vh;
+    }
+}
+
+/* Set the min height of the video / make it scalable */
+
+.videoContent {
+    min-height: calc(100vh - 83px);
+    display: flex;
+}
+
+/* Title text */
+
+.title {
+    font-family: productSans;
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 35px;
+    opacity: 1;
+}
+
+.descriptionGroup {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Description text */
+
+.desc {
+    font-family: productSans;
+    font-size: 20px;
+    color: #9a9a9a;
+    text-align: center;
+    opacity: 1;
+}
+
+/* Text container for the video container */
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
+.centeredContainer {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+/* Scroll button text */
+
+.scrollButton {
+    padding-top: 155px;
+    font-family: productSans, serif;
+    font-size: 18px;
+    color: #fff;
+    transform: translateY(-80px);
+    text-align: center;
+    text-decoration: none;
+    filter: drop-shadow(0 0 3px #777);
+    opacity: 1;
+}
+
+/* Arrow for the circle inside */
+
+.scrollButton span {
+    position: absolute;
+    left: 50%;
+    margin-top: -60px;
+    width: 46px;
+    height: 46px;
+    margin-left: -23px;
+    border: 2px solid #fff;
+    border-radius: 30%;
+    box-sizing: border-box;
+}
+
+/* Circle */
+
+.scrollButton span::after {
+    position: absolute;
+    top: 57%;
+    left: 55.5%;
+    content: '';
+    width: 12px;
+    height: 12px;
+    margin: -12px 0 0 -8px;
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    box-sizing: border-box;
+}
+
+/* Information section, used for the button at the top to scroll */
+
+#informationSection {
+    padding-top: 60px;
+}
+
+/* Information title, used to make new categories */
+
+.informationTitle {
+    font-family: productSans, serif;
+    text-align: center;
+    font-size: 35px;
+    color: #fff;
+}
+
+.informationDescription {
+    font-family: productSans, serif;
+    text-align: center;
+    font-size: 20px;
+    color: gray;
+    padding-bottom: 60px;
+}
+
+/* Used to display cards, 2 cards will be displayed at a time, 1 if the display is too small */
+
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: row;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+}
+
+/* Card class, rounded */
+
+.card {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #9230FF;
+    border-width: 2px;
+    float: left;
+    position: relative;
+    background-color: #1e1e1e;
+    color: white;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, .5));
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 33%;
+    flex: 0 0 33%;
+    z-index: 98;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Card container, padding */
+
+.cardContainer {
+    padding: 32px 32px;
+}
+
+/* Card title text (big) */
+
+.cardTitle {
+    font-family: productSans, serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 32px;
+}
+
+/* Card title icon, mainly used for information (might rename) */
+
+.cardTitleIcon {
+    font-family: iconFont, serif;
+    text-align: center;
+    font-size: 24px;
+    color: #9230FF;
+}
+
+/* Card text (small) */
+
+.cardText {
+    font-family: productSans, serif;
+    text-align: center;
+    color: gray;
+    font-size: 18px;
+}
+
+/* Partner section for paddings */
+
+#partnerSection {
+    padding-top: 10px;
+}
+
+/* Partner image, adjusts the size */
+
+.partnerImage {
+    display: block;
+    max-width: 75%;
+    max-height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Partner Button class */
+
+.partnerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 1;
+    min-width: 140px;
+    width: 45%;
+    height: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #9230FF;
+}
+
+/* Button Header text */
+
+.btnHeader {
+    font-family: productSans, serif;
+    font-size: 26px;
+    color: #fff;
+    padding-bottom: 5px;
+}
+
+/* Button Footer text */
+
+.btnFooter {
+    font-family: productSans, serif;
+    color: #fff;
+    font-size: 14px;
+}
+
+#mediaSection {
+    padding-top: 10px;
+}
+
+.mediaFrame {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+/* Card class, rounded, smaller than normal */
+
+.smallerCard {
+    border-radius: 10px;
+    float: left;
+    position: relative;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #9230FF;
+    border-width: 2px;
+    filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, .5));
+    transition: 0.3s;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+    width: 25%;
+    flex: 0 0 25%;
+    z-index: 98;
+}
+
+/* Responsive Design (i hate responsive design) */
+
+@media screen and (max-width: 1200px) {
+    .card {
+        flex: 0 0 75%
+    }
+    .smallerCard {
+        flex: 0 0 50%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .card {
+        flex: 0 0 85%
+    }
+    .smallerCard {
+        flex: 0 0 100%
+    }
+}
